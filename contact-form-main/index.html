@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Contact form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  <form class="container" id="myForm">
+    <h1>Contact Us</h1>
+    <div class="box1">
+      <div class="fn-box">
+        <label for="first-name" class="star">First Name</label>
+        <input type="text" id="first-name">
+        <small class="error-msg"></small>
+      </div>
+      <div class="ln-box">
+        <label for="last-name" class="star">Last Name</label>
+        <input type="text" id="last-name">
+        <small class="error-msg"></small>
+      </div>
+    </div>
+    <div class="box2">
+      <label for="email" class="star">Email Address</label>
+      <input type="text" id="email">
+      <small class="error-msg"></small>
+    </div>
+    <div class="box3">
+      <label for="q-type" class="star">Query Type</label>
+      <div class="q-types" id="q-types">
+        <div class="qt" id="qt1">
+          <label for="ge">
+            <input type="radio" name="q-type" id="ge">
+            General Enquiry
+          </label>
+        </div>
+        <div class="qt" id="qt2">
+          <label for="sr">
+            <input type="radio" name="q-type" id="sr">
+            Support Request
+          </label>
+        </div>
+      </div>
+      <small class="error-msg"></small>
+    </div>
+    <div class="box4">
+      <label for="message" class="star">Message</label>
+      <textarea name="message" id="message"></textarea>
+      <small class="error-msg"></small>
+    </div>
+    <div class="box5">
+      <label for="info" class="star" id="info-label">
+        <input type="checkbox" name="info" id="info">
+        I consent to being contacted by the team
+      </label>
+      <small class="error-msg"></small>
+    </div>
+    <button id="clickBtn" type="submit">Submit</button>
+  </form>
+
+  <div class="message-sent" id="successPopup">
+    <div class="ms">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" fill="none" viewBox="0 0 20 21"><path fill="#fff" d="M14.28 7.72a.748.748 0 0 1 0 1.06l-5.25 5.25a.748.748 0 0 1-1.06 0l-2.25-2.25a.75.75 0 1 1 1.06-1.06l1.72 1.72 4.72-4.72a.75.75 0 0 1 1.06 0Zm5.47 2.78A9.75 9.75 0 1 1 10 .75a9.76 9.76 0 0 1 9.75 9.75Zm-1.5 0A8.25 8.25 0 1 0 10 18.75a8.26 8.26 0 0 0 8.25-8.25Z"/></svg>
+      <h3>Message Sent!</h6>
+    </div>
+    <p>Thanks for completing the form. We'll be in touch soon!</p>
+  </div>
+
+  <script src="index.js"></script>
+
+  <!-- First Name
+  This field is required
+
+  Last Name
+  This field is required
+
+  Email Address
+  Please enter a valid email address
+  This field is required
+
+  Query Type
+  General Enquiry
+  Support Request
+  Please select a query type
+
+  Message
+  This field is required
+
+  I consent to being contacted by the team
+  To submit this form, please consent to being contacted
+
+
+  Message Sent!
+  Thanks for completing the form. We'll be in touch soon! -->
+  
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Coded by <a href="#">Ahmed Yahia</a>.
+  </div> -->
+</body>
+</html>
