@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+:root{
+  /* ## Layout */
+
+  
+  --Mobile: 375px;
+  --Desktop: 1440px;
+
+  /* ## Colors */
+
+  /* ### Primary */
+
+  --Purple-500: hsl(259, 100%, 65%);
+  --Red-400: hsl(0, 100%, 67%);
+
+/* ### Neutral */
+
+  --White: hsl(0, 100%, 100%);
+  --Grey-100: hsl(0, 0%, 94%);
+  --Grey-200: hsl(0, 0%, 86%);
+  --Grey-500: hsl(0, 1%, 44%);
+  --Black: hsl(0, 0%, 0%);
+
+  /* ## Typography */
+
+/* ### Body Copy */
+
+  --Font-size : 32px;/*(inputs)*/
+
+/* ### Font */
+
+  --Family: 'Poppins', sans-serif;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: var(--Family);
+  background-color: var(--Grey-100);
+  color: var(--Black);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.calculator{
+  padding: 3.5rem;
+  border-radius: 1.5rem;
+  background-color: var(--White);
+  border-bottom-right-radius: 200px;
+}
+
+.date, .date-type, .pro, .result{
+  display: flex;
+}
+
+.date{
+  gap: 2rem;
+}
+
+.date-type{
+  flex-direction: column;
+  gap: 8px;
+  max-width: 10rem;
+}
+
+.date-type label{
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+@font-face {
+  font-family: 'ExtraBold';
+  src: url('./assets/fonts/Poppins-ExtraBold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.date-type input{
+  padding: 16px 24px;
+  width: 100%;
+  font-family: 'ExtraBold', sans-serif;
+  font-size: var(--Font-size);
+  letter-spacing: 2px;
+  outline: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all .4s ease;
+  border: 1px solid var(--Grey-500);
+  caret-color: var(--Purple-500);
+}
+
+.date-type input:hover,
+.date-type input:focus {
+  border: 1px solid var(--Purple-500);
+}
+
+.date-type p{
+  font-family: 'Italic', sans-serif;
+  font-size: 14px;
+}
+
+@font-face {
+  font-family: 'Italic';
+  src: url('./assets/fonts/Poppins-Italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.pro{
+  flex-direction: row;
+  width: 45.5rem;
+  align-items: center;
+}
+
+.pro hr {
+  flex: 1;
+  border: none;
+  border-top: 1px solid var(--Grey-200);
+}
+
+.pro button{
+  padding: 1.5rem;
+  border: none;
+  background-color: var(--Purple-500);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all .4s ease;
+}
+
+.pro button:hover{
+  background-color: var(--Black);
+}
+
+@font-face {
+  font-family: 'ExtraBoldItalic';
+  src: url('./assets/fonts/Poppins-ExtraBoldItalic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.result{
+  flex-direction: column;
+  line-height: 1.05;
+}
+
+.result p{
+  font-size: 6.7rem;
+  font-family: 'ExtraBoldItalic', sans-serif;
+  letter-spacing: -3px;
+}
+
+.result p span{
+  color: var(--Purple-500);
+  margin-right: 10px;
+}
